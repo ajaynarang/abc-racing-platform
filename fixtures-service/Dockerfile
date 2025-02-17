@@ -6,7 +6,9 @@ COPY package*.json ./
 
 RUN npm install 
 
+COPY .env .env
 COPY . .
+
 
 # Expose the port
 EXPOSE 4000

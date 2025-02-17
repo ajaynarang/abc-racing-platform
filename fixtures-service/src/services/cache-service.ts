@@ -1,13 +1,13 @@
 import Redis from "ioredis";
+import "dotenv/config"; 
 
 export class CacheService {
   private redis: Redis;
 
   constructor() {
-    // should come from env, leaving it for demo purpose
     this.redis = new Redis({
       host: process.env.REDIS_HOST,
-      port: process.env.REDIS_PORT,
+      port: process.env.REDIS_PORT ? parseInt(process.env.REDIS_PORT) : 6379,
       password: process.env.REDIS_PASSWORD,
       db: 0,
     });
