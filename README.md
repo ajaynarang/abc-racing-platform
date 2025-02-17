@@ -5,13 +5,15 @@ This repo contains two main parts (kept in single repo to keep it simple):
 1. **Next.js App** (`fixture-ui`): A frontend app that displays one vertical "Fixtures".
 2. **Node.js App** (`fixture-service`): A backend API created with Express and BFF layer with GraphQL to provide optimized data for the frontend. The API is served at `http://localhost:4000/graphql` (GraphQL endpoint) and `http://localhost:4000/api` (RESTful endpoint).
 
-Both app can be hosted and run locally using Docker. Docker files are created.
+
+Both app can be hosted and run locally using Docker. Docker and docker compose files are created.
+
 ---
 
 ### Prerequisites  
 - **Docker**: Please ensure Docker is installed on your machine else you need to manually run the npm scripts.  
 - **Node.js**: Required to run the API and Next.js app (if not using Docker).  
-- **Redis (Cloud)**: Cloud Redis instance is used for caching, credentials are hard-coded for now.  
+- **Redis (Cloud)**: Cloud Redis instance is used for caching, credentials are checked with env file for now.  
 - **MongoDB**: Not implemented yet.
 ---
 
@@ -36,12 +38,12 @@ Both app can be hosted and run locally using Docker. Docker files are created.
 
 ### Project Structure
 
-- **`abc-racing-platform`** 
-  - `docker-compose.yml`: Docker compose file to run the services.
-  - `fixture-ui/` (Next.js frontend)
-    - Contains the Next.js app for displaying fixtures.
-  - `fixture-service/` (Node.js backend with Express and GraphQL layer)
-    - Contains the API and GraphQL BFF layer for optimized reads.
+- **`abc-racing-platform`**
+  - `docker-compose.yml`: The Docker Compose file for running the services.
+  - `diagrams`: This folder contains all the architecture diagrams.
+  - `github wiki`: Documentation files for architecture and other details are stored here.
+  - `fixture-ui/` (Next.js frontend): Hosts the Next.js app for displaying fixtures.
+  - `fixture-service/` (Node.js backend with Express and GraphQL layer): Contains the API and GraphQL BFF layer for optimized reads.
 
 ---
 
