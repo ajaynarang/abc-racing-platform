@@ -1,5 +1,7 @@
 # ABC Racing Platform
 
+Please refer to [wiki](https://github.com/ajaynarang/abc-racing-platform/wiki/Solution-Architecture-&-Tech-Stack) for architecture documentation.
+
 ### Overview
 This repo contains two main parts (kept in single repo to keep it simple):
 1. **Next.js App** (`fixture-ui`): A frontend app that displays one vertical "Fixtures".
