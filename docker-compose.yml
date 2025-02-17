@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  abc-fixture-ui:
+    build:
+      context: .//fixtures-ui
+    ports:
+      - "3000:3000"
+    depends_on:
+      - abc-fixture-api
+
+  abc-fixture-api:
+    build:
+      context: ./fixtures-service
+    ports:
+      - "4000:4000"

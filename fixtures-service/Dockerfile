@@ -1,0 +1,17 @@
+FROM node:18-alpine
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+
+RUN npm install 
+
+COPY . .
+
+# Expose the port
+EXPOSE 4000
+
+ENV NODE_ENV=development
+
+CMD ["npm", "run", "dev"]
+
